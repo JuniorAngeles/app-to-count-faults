@@ -1,5 +1,6 @@
 // formulario
 const form = document.getElementById("formulario");
+const botonVer = document.getElementById("botonVer");
 
 // crear usuario
 const handleSubmit = (e) => {
@@ -26,3 +27,17 @@ const datos = localStorage.getItem("datos");
 if (datos) {
   window.location.href = "inicio-sesion.html";
 }
+
+// mostrar/ocultar contraseña
+botonVer.addEventListener("click", () => {
+  const password = document.getElementById("password");
+  const img = document.getElementById("img");
+
+  if (password.type === "password") {
+    password.type = "text";
+    img.src = "../img/view.png";
+  } else {
+    password.type = "password";
+    img.src = "../img/hide.png";
+  }
+});
