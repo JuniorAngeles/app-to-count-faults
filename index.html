@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Anota tus faltas</title>
   </head>
   <body>
-    <div id="constenedor"></div>
+    <div class="menu">
+      <ul>
+        <li><a href="./inicio-sesion.html">Cerrar Sesión</a></li>
+        <li><a id="botonCuenta">Eliminar cuenta</a></li>
+      </ul>
+    </div>
 
-    <button><a href="./inicio-sesion.html">Cerrar Cesion</a></button>
-    <button id="botonCuenta">eliminar cuenta</button>
-    <button id="botonClick">click count</button>
-    <button id="deleteClick">click delete</button>
+    <div id="constenedor"></div>
+    <div class="botones">
+      <button id="botonClick">click count</button>
+      <button id="deleteClick">click delete</button>
+    </div>
     <script src="./src/main.js"></script>
   </body>
 </html>

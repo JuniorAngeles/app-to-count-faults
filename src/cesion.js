@@ -1,5 +1,6 @@
 // obtener datos datos del html
 const form = document.getElementById("formulario");
+const botonVer = document.getElementById("botonVer");
 
 // obtener credenciales del usuario
 const nameL = localStorage.getItem("name");
@@ -22,3 +23,18 @@ const handleSubmit = (e) => {
 };
 
 form.addEventListener("submit", handleSubmit);
+
+// mostrar/ocultar contraseña
+botonVer.addEventListener("click", (e) => {
+  e.preventDefault();
+  const password = document.getElementById("password");
+  const img = document.getElementById("img");
+
+  if (password.type === "password") {
+    password.type = "text";
+    img.src = "../img/view.png";
+  } else {
+    password.type = "password";
+    img.src = "../img/hide.png";
+  }
+});

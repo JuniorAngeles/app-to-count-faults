@@ -20,10 +20,10 @@ const handleClick = (e) => {
   localStorage.setItem("valor", JSON.stringify(valor));
   const dato = JSON.parse(localStorage.getItem("valor"));
   contenedor.innerHTML = `
-  faltas que lleva:
-  <h4> ${dato.count}</h4>
-  dinero a pagar:
-  <h4> ${dato.money}</h4>
+  <h3 style="text-align: center;"> faltas que lleva:</h3>
+  <h4 style="text-align: center;">${count}</h4>
+  <h3 style="text-align: center;"> dinero a pagar:</h3>
+  <h4 style="text-align: center;">${money}</h4>
   `;
 };
 button.addEventListener("click", handleClick);
@@ -32,10 +32,10 @@ button.addEventListener("click", handleClick);
 const dato = JSON.parse(localStorage.getItem("valor"));
 if (dato === null) {
   contenedor.innerHTML = `
-  faltas que lleva:
-  <h4> ${count}</h4>
-  dinero a pagar:
-  <h4> ${money}</h4>
+ <h3 style="text-align: center;"> faltas que lleva:</h3>
+  <h4 style="text-align: center;">${count}</h4>
+  <h3 style="text-align: center;"> dinero a pagar:</h3>
+  <h4 style="text-align: center;">${money}</h4>
   `;
 }
 

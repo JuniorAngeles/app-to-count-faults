@@ -29,7 +29,8 @@ if (datos) {
 }
 
 // mostrar/ocultar contraseña
-botonVer.addEventListener("click", () => {
+botonVer.addEventListener("click", (e) => {
+  e.preventDefault();
   const password = document.getElementById("password");
   const img = document.getElementById("img");
 

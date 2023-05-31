@@ -4,25 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/form.css" />
     <title>Form</title>
   </head>
   <body>
-    <h1>Registrarse</h1>
-    <form id="formulario">
-      <input type="text" name="name" id="name" placeholder="Nombre" required />
-      <input
-        type="password"
-        name="password"
-        id="password"
-        minlength="8"
-        required
-      />
-      <input type="submit" value="Enviar" />
-    </form>
-
-    <button id="botonVer">
-      <img id="img" src="./img/hide.png" alt="" />
-    </button>
+    <div class="container">
+      <h1>Sign up</h1>
+      <form id="formulario">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Nombre"
+          required
+        />
+        <div class="password-toggle">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            minlength="8"
+            required
+            placeholder="Contraseña"
+          />
+          <span class="toggle-btn">
+            <button id="botonVer">
+              <img
+                id="img"
+                src="./img/hide.png"
+                alt="Mostrar/Ocultar contraseña"
+                width="20"
+                height="20"
+              />
+            </button>
+          </span>
+        </div>
+        <input type="submit" value="Sign up" />
+      </form>
+    </div>
     <script src="./src/form.js"></script>
   </body>
 </html>
